@@ -1,9 +1,18 @@
 import React from 'react';
+import Products from '../Products/Products';
+import Banner from '../Shared/Banner';
+
+
+// import CountDown from './CountDown';
+
 
 const Home = () => {
   return (
     <div>
-      <h2>This is Home</h2>
+      <Banner></Banner>
+      <Products></Products>
+
+      {/* <CountDown></CountDown> */}
     </div>
   );
 };

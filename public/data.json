@@ -1,0 +1,63 @@
+[
+  {
+    "_id": 1,
+    "name": "The Claw Hammer",
+    "price": "89$",
+    "img": "https://images.pexels.com/photos/5691537/pexels-photo-5691537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description":"The most commonly purchased claw hammer is the 20 oz. size. It’s heavy enough to easily drive nails but easily manipulated when pulling nails. While wooden handles are picturesque, they may not stand up to the strain if you have to pull a lot of nails. Hammers with a steel handle, or even fiberglass, will be stronger. ",
+    
+    "avilable": "67",
+    "minimun": "3"
+    
+  },
+  {
+    "_id": 2,
+    "name": "The Tape Measure",
+    "price": "67$",
+    "img": "https://images.pexels.com/photos/8821537/pexels-photo-8821537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description":"Get a retractable one that is at least 25 feet long. Any longer than that, and you start having problems getting it to roll back up. Since measurements on large scale projects can be very susceptible to even the most minute measurement variations, you’ll want to make sure the “hook” or tab at the end of the is firmly attached.",
+    
+    "avilable": "80",
+    "minimun": "5"
+  },
+  {
+    "_id": 3,
+    "name": "The Screwdriver",
+    "price": "30$",
+    "img": "https://images.pexels.com/photos/5974048/pexels-photo-5974048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description":"You’ll need a long screwdriver with a square blade that is very heavy duty. This gives you a lot of torque. You’ll also need a small and medium slot screwdriver. For working on cabinets or tight places in woodworking, you’ll need a screwdriver with a thin shank so that you can reach screws that are inside of deep holes.",
+    
+    "avilable": "73",
+    "minimun": "7"
+  },
+  {
+    "_id": 4,
+    "name": "The Chisel",
+    "price": "80$",
+    "img": "https://images.pexels.com/photos/5711900/pexels-photo-5711900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description":"Most chisels are beveled on the 2 sides and on the cutting edge, but specialty chisels may only be beveled at the cutting edge. This bevel will be at 20 to 25 degrees down the length of the blade on one side, and flat on the backside. The blade will be between 4” and 7” long. Make sure you get chisels with a grip that fits your hand.",
+    
+    "avilable": "70",
+    "minimun": "7"
+  },
+  {
+    "_id": 5,
+    "name": " The Nail Set",
+    "price": "34$",
+    "img": "https://images.pexels.com/photos/5691699/pexels-photo-5691699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description":"The next hand tool every woodworker should have is a nail set. In fact, you should have several sizes. They look like awls, and you use them to drive nail heads into the wood so they are flush or right below the surface. This allows you to fill the holes and prepare for staining or painting. The nail setter will usually have either a convex.",
+    
+    "avilable": "42",
+    "minimun": "6"
+  },
+  {
+    "_id": 6,
+    "name": "The Moisture Meter",
+    "price": "26$",
+    "img": "https://images.pexels.com/photos/8821537/pexels-photo-8821537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description":"A quality wood moisture meter is vital to the long-term success of any woodworking project you put together. Lumber mills try to dry their batches of lumber according to the intended end product destination. That is, if the wood is harvested in the wet Northeast, but is going to be shipped to the arid Southwest.",
+    
+    "avilable": "67",
+    "minimun": "4"
+  }
+]

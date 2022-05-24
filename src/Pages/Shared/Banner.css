@@ -1,0 +1,22 @@
+.bannerImg{
+  background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://i.ibb.co/HGkBhs5/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+
+}
+.value-1{
+  --value:15;
+}
+.value-2{
+  --value:10;
+}
+.value-3{
+  --value:24;
+}
+.value-4{
+  --value:34;
+}
+
+
+/* https://i.ibb.co/0CVsvmb/stock-photo-top-view-various-carpentry-tools-3.jpg */

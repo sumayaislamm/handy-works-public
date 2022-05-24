@@ -1,11 +1,11 @@
 import React from 'react';
 
-const About = () => {
+const Dashbroad = () => {
   return (
     <div>
-     
+      Dashbroad
     </div>
   );
 };
 
-export default About;
+export default Dashbroad;
