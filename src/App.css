@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.backgndImg{
+  width: 100%;
+  background: linear-gradient( to top, black ,black), url(https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170) ;
+  background-position: center;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
