@@ -4,13 +4,13 @@ import logo from '../../Images/logo-removebg-preview.png';
 const Navbar = () =>  {
   const menuItems = (
     <>
-     <li><Link  className="text-2xl" to="/">Home</Link ></li>
-      <li><Link className="text-2xl" to="/about">About</Link></li>
-      <li><Link className="text-2xl" to="/blog">Blog</Link></li>
-      <li><Link className="text-2xl" to="/dashbroad">Dashbroad</Link></li>
-      <li><Link className="text-2xl" to="/appointment">Apponitment</Link></li>
-      <li><Link className="text-2xl" to="/purchase">Purchase</Link></li>
-      <li><Link className="text-2xl" to="/login">Login</Link ></li>
+     <li><Link  className="text-l" to="/">Home</Link ></li>
+      <li><Link className="text-l" to="/about">About</Link></li>
+      <li><Link className="text-l" to="/blog">Blog</Link></li>
+      <li><Link className="text-l" to="/dashbroad">Dashbroad</Link></li>
+      <li><Link className="text-l" to="/appointment">Apponitment</Link></li>
+      <li><Link className="text-l" to="/purchase">Purchase</Link></li>
+      <li><Link to="/login" className="btn btn-outline btn-accent">Login</Link></li>
     </>
   );
   return (
@@ -43,9 +43,9 @@ const Navbar = () =>  {
           
         </div>
         <img className=" ml-5 w-30 h-20" src={logo} alt="" />
-        <Link to="/" className="btn btn-ghost normal-case mx-8  text-4xl"> Handiworks</Link>
+        <Link to="/" className="btn btn-ghost normal-case mx-6 text-neutral  text-4xl"> Handiworks</Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden mx-8 lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
     </div>

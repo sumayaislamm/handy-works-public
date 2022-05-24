@@ -16,7 +16,7 @@ const Products = () => {
     <div>
       <h1 className='text-4xl lg:text-8xl text-center p-2 lg:p-8  ' >Here Our <span className='text-cyan-500'>Products</span></h1>
       <p className=' text-xl lg:text-4xl text-center'>You Can <span className='text-cyan-500'>Choice Here</span></p>
-      <div class="divider"></div> 
+      <div className="divider"></div> 
       <div className=' grid grid-cols-1 lg:grid-cols-2 gap-4 p-12'>
    
    {
