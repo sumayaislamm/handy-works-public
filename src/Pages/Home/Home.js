@@ -15,7 +15,8 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Products></Products>
-      <Info></Info>
+      
+      <Info ></Info>
     <CountDown targetDate={dateTimeAfterTwentyDays}></CountDown>
     </div>
   );
