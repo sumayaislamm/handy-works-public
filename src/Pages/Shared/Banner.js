@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Banner.css";
 
 const Banner = () => {
@@ -14,9 +15,9 @@ const Banner = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">
+            <Link to="/" className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,22 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
+import Loading from "../Shared/Loading";
 
 const Login = () => {
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
 
-  if (user) {
-    console.log(user);
+
+
+  let signInErrorMessage;
+
+  if(loading || gLoading){
+    return <Loading></Loading>
+  }
+
+  if(error || gError){
+    signInErrorMessage = <p className="label-text-alt text-red-500 my-4">{error?.message || gError?.message}</p>
+  }
+
+  if (user || gUser) {
+    console.log(user || gUser);
   }
   const onSubmit = (data) => {
     console.log(data);
+    signInWithEmailAndPassword(data.email, data.password);
   };
 
   return (
@@ -72,9 +92,12 @@ const Login = () => {
             {errors.password?.type === "minLength" && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
             </label>
             </div>
-
+             {signInErrorMessage}
             <input className="btn w-full max-w-xs btn-outline text-center justify-center btn-accent" type="submit" value="Login" />
           </form>
+          <small><p className="my-5">New to Handy Works? 
+            <Link to="/register" className="text-blue-500"> CREATE NEW ACCOUNT!
+          </Link></p></small>
           <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
