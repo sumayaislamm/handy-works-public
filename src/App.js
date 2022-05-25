@@ -12,6 +12,8 @@ import Banner from "./Pages/Shared/Banner";
 import Dashbroad from "./Pages/Shared/Dashbroad";
 import Navbar from "./Pages/Shared/Navbar";
 import Register from "./Pages/Forms/Register";
+import RequireAuth from "./Pages/Forms/RequireAuth";
+import Purchase from "./Pages/Purchase/Purchase";
 
 
 function App() {
@@ -26,7 +28,12 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-         <Route path="/dashbroad" element={<Dashbroad></Dashbroad>}></Route>
+         <Route path="/dashbroad" element={<RequireAuth>
+           <Dashbroad></Dashbroad>
+           </RequireAuth>}></Route>
+         <Route path="/purchase" element={<RequireAuth>
+           <Purchase></Purchase>
+           </RequireAuth>}></Route>
          <Route path="/blog" element={<Blog></Blog>}></Route>
          <Route path="/appointment" element={<Appoimtment></Appoimtment>}></Route>
          <Route path="*" element={<NotFound></NotFound>}></Route>
