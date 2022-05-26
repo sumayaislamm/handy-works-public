@@ -5,19 +5,23 @@ const useToken = user =>{
   useEffect( () =>{
     const email = user?.user?.email;
     const currentUser = {email: email};
+    
     if(email){
-      fetch(`http://localhost:5000/user/${email}`,{
+      const url = `http://localhost:5000/user/${email}`
+      console.log(email);
+      fetch(url,{
          method: 'PUT',
          headers: {
            'content-type': 'application/json'
          },
          body:JSON.stringify(currentUser)
       })
+      .then(res=> res.json())
       .then(data =>{
         console.log('data inside token', data);
-        const token = data.token;
-
-        setToken(token);
+        const accesstoken = data.token;
+        localStorage.setItem('accessToken', accesstoken);
+        setToken(accesstoken);
       })
     }
 
