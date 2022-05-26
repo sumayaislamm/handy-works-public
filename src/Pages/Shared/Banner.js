@@ -11,9 +11,7 @@ const Banner = () => {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
             <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Welcome to our center. <br /> You can visit here and get product as you like.
             </p>
             <a href="#product" className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">
               Get Started

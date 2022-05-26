@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Dashbroad = () => {
+const MyProfile = () => {
   return (
     <div>
-      Dashbroad
+      my history
     </div>
   );
 };
 
-export default Dashbroad;
+export default MyProfile;

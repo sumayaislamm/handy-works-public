@@ -18,7 +18,9 @@ const Navbar = () =>  {
       <li><Link className="text-l" to="/about">About</Link></li>
       <li><Link className="text-l" to="/blog">Blog</Link></li>
       <li><Link className="text-l" to="/addproducts">Add Reviews</Link></li>
+      { user &&
       <li><Link className="text-l" to="/dashbroad">Dashbroad</Link></li>
+      }
       <li><Link className="text-l" to="/portfolio">My Portfolio</Link></li>
       {/* <li><Link className="text-l" to="/purchase">Purchase</Link></li> */}
       <li>{ user ? <button className="btn btn-outline btn-accent" onClick={logout}>Log Out</button> :
@@ -60,6 +62,24 @@ const Navbar = () =>  {
       </div>
       <div className="navbar-center hidden mx-8 lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+      </div>
+      <div className="navbar-end">
+      <label tabIndex="1" for="dashbroad-sidebar" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
       </div>
     </div>
   );

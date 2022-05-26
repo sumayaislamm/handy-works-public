@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 const SinglePurchase = ({ modal, setModal }) => {
   const {_id, name, price} = modal;
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const handleModal = event =>{
     event.preventDefault();
     const name = event.target.name.value;

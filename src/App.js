@@ -7,7 +7,6 @@ import Login from "./Pages/Forms/Login";
 import Footer from "./Pages/Home/Footer";
 import Home from "./Pages/Home/Home";
 import NotFound from "./Pages/NotFound/NotFound";
-import Dashbroad from "./Pages/Shared/Dashbroad";
 import Navbar from "./Pages/Shared/Navbar";
 import Register from "./Pages/Forms/Register";
 import RequireAuth from "./Pages/Forms/RequireAuth";
@@ -17,6 +16,10 @@ import MyPortfolio from "./Pages/Blog/MyPortfolio";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Dashbroad from "./Pages/Dashbroad/Dashbroad";
+import MyOrders from "./Pages/Dashbroad/MyOrders";
+import MyReview from "./Pages/Dashbroad/MyReview";
+import MyProfile from "./Pages/Dashbroad/MyProfile";
 
 
 function App() {
@@ -31,9 +34,15 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+
          <Route path="/dashbroad" element={<RequireAuth>
            <Dashbroad></Dashbroad>
-           </RequireAuth>}></Route>
+           </RequireAuth>}>
+             <Route index element={<MyOrders></MyOrders>}></Route>
+             <Route path="review" element={<MyReview></MyReview>}></Route>
+             <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+           </Route>
+
          <Route path="/purchase/:purchaseId" element={<RequireAuth>
            <Purchase></Purchase>
            </RequireAuth>}></Route>
