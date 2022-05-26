@@ -8,9 +8,9 @@ const Blog = () => {
       </h1>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 mx-10 my-8  text-center justify-center">
         {/* card 1 */}
-        <div class="card w-96 bg-base-100 shadow-2xl">
-          <div class="card-body">
-            <h2 class="card-title text-xl font-bold">
+        <div className="card w-96 bg-base-100 shadow-2xl">
+          <div className="card-body">
+            <h2 className="card-title text-xl font-bold">
               How will you improve the performance of a React Application?
             </h2>
             <p>Answer: <br />
@@ -22,9 +22,9 @@ const Blog = () => {
           </div>
         </div>
         {/* card 2 */}
-        <div class="card w-96 bg-base-100 shadow-2xl">
-          <div class="card-body">
-            <h2 class="card-title text-xl font-bold">
+        <div className="card w-96 bg-base-100 shadow-2xl">
+          <div className="card-body">
+            <h2 className="card-title text-xl font-bold">
             What are the different ways to manage a state in a React application?
             </h2>
             <p>Answer: <br />
@@ -43,9 +43,9 @@ const Blog = () => {
           </div>
         </div>
         {/* card 3 */}
-        <div class="card w-96 bg-base-100 shadow-2xl">
-          <div class="card-body">
-            <h2 class="card-title text-xl font-bold">
+        <div className="card w-96 bg-base-100 shadow-2xl">
+          <div className="card-body">
+            <h2 className="card-title text-xl font-bold">
             How does prototypical inheritance work?
             </h2>
             <p>Answer: <br />
@@ -54,9 +54,9 @@ const Blog = () => {
           </div>
         </div>
         {/* card 4 */}
-        <div class="card w-96 bg-base-100 shadow-2xl">
-          <div class="card-body">
-            <h2 class="card-title text-xl font-bold">
+        <div className="card w-96 bg-base-100 shadow-2xl">
+          <div className="card-body">
+            <h2 className="card-title text-xl font-bold">
               How will you improve the performance of a React Application?
             </h2>
             <p>Answer: <br />
@@ -65,9 +65,9 @@ const Blog = () => {
           </div>
         </div>
         {/* card 5 */}
-        <div class="card w-96 bg-base-100 shadow-2xl">
-          <div class="card-body">
-            <h2 class="card-title text-xl font-bold">
+        <div className="card w-96 bg-base-100 shadow-2xl">
+          <div className="card-body">
+            <h2 className="card-title text-xl font-bold">
             What is a unit test? Why should write unit tests?
             </h2>
             <p>Answer: <br />

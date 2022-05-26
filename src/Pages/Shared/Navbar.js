@@ -17,10 +17,11 @@ const Navbar = () =>  {
      <li><Link  className="text-l" to="/">Home</Link ></li>
       <li><Link className="text-l" to="/about">About</Link></li>
       <li><Link className="text-l" to="/blog">Blog</Link></li>
+      <li><Link className="text-l" to="/addproducts">Add Reviews</Link></li>
       <li><Link className="text-l" to="/dashbroad">Dashbroad</Link></li>
-      <li><Link className="text-l" to="/appointment">Apponitment</Link></li>
-      <li><Link className="text-l" to="/purchase">Purchase</Link></li>
-      <li>{ user ? <button class="btn btn-outline btn-accent" onClick={logout}>Log Out</button> :
+      <li><Link className="text-l" to="/portfolio">My Portfolio</Link></li>
+      {/* <li><Link className="text-l" to="/purchase">Purchase</Link></li> */}
+      <li>{ user ? <button className="btn btn-outline btn-accent" onClick={logout}>Log Out</button> :
         <Link to="/login" className="btn btn-outline btn-accent">Login</Link>
         }</li>
     </>

@@ -3,6 +3,7 @@ import Info from '../Bussiness/Info';
 import Products from '../Products/Products';
 import Banner from '../Shared/Banner';
 import CountDown from './CountDown';
+import Services from './Services';
 
 
 const Home = () => {
@@ -14,10 +15,12 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
+      <div className='px-12'>
       <Products></Products>
-      
+      <Services></Services>
       <Info ></Info>
     <CountDown targetDate={dateTimeAfterTwentyDays}></CountDown>
+    </div>
     </div>
   );
 };

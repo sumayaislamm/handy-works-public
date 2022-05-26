@@ -49,7 +49,7 @@ const Countdown = ({ targetDate }) => {
       <div className="text-center my-20">
         <h1 className="text-center   my-20 text-5xl font-bold">Wait For Our <span className="text-cyan-500">New Features</span></h1>
         <div className="divider"></div>
-        <div className="grid grid-flow-col gap-5 text-center bg-gradient-to-r from-cyan-500 to-blue-500 p-12 rounded justify-center  auto-cols-max">
+        <div className="grid lg:grid-flow-col gap-5 text-center bg-gradient-to-r from-cyan-500 to-blue-500 p-12 rounded justify-center  auto-cols-max">
           <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
             <span className="countdown font-mono text-5xl">
             Days: {days}

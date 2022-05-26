@@ -1,10 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import SinglePurchase from "./SinglePurchase";
 
 const Purchase = () => {
+  const { purchaseId } = useParams();
+  const [purchase, setPurchase] = useState({});
+  const [modal, setModal] = useState(null);
+
+  useEffect(() => {
+    const url = `http://localhost:5000/product/${purchaseId}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setPurchase(data));
+  }, []);
+
   return (
     <div>
-      purchase
+      <div className="card justify-center items-center grid grid-cols-2 gap-10 lg:card-side bg-base-100 shadow-xl">
+      <div className="card bg-base-100 shadow-xl">
+      <figure className="px-10 pt-10">
+        <img src={purchase.img} alt="Shoes" className="rounded-xl w-3/12" />
+      </figure>
+      <div className="card-body items-center text-center">
+        <h2 className="card-title text-xl lg-text-3xl text-cyan-500  text-center">
+          {purchase.name}
+        </h2>
+        <p className="text-sm lg:text-xl text-cyan-500">
+          Price:{purchase.price}
+        </p>
+        <p className="text-sm lg:text-xl text-cyan-500">
+          Stock:{purchase.avilable}
+        </p>
+        <p className="text-sm lg:text-xl text-cyan-500">
+          Minimum Order:{purchase.minimun}
+        </p>
+        <div className="card-actions">
+        
+            <label htmlFor="my-modal" onClick={() => setModal(purchase)} className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">open modal</label>
+            {modal && <SinglePurchase modal={modal} setModal={setModal}></SinglePurchase>}
+        </div>
+      </div>
     </div>
+    <div>
+    <div className=" grid grid-rows-3 gap-2 pt-10 ">
+    <input type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
+    <input type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
+    <input type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
+  
+    </div>
+    <Link to="/" className="btn btn-primary mt-20 ml-20 bg-gradient-to-r from-cyan-500 to-blue-500 ">
+              Confirm Order
+            </Link>
+    </div>
+      </div>
+    </div>
+
   );
 };
 

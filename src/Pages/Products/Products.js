@@ -6,14 +6,14 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect( ()=>{
-    fetch('data.json')
+    fetch('http://localhost:5000/product')
     .then(res => res.json())
     .then(data => setProducts(data));
   }, []);
 
   return (
 
-    <div>
+    <div id='product'>
       <h1 className='text-4xl lg:text-8xl text-center p-2 lg:p-8  ' >Here Our <span className='text-cyan-500'>Products</span></h1>
       <p className=' text-xl lg:text-4xl text-center'>You Can <span className='text-cyan-500'>Choice Here</span></p>
       <div className="divider"></div> 

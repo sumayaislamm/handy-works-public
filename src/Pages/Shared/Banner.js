@@ -15,9 +15,9 @@ const Banner = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <Link to="/" className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">
+            <a href="#product" className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       </div>
