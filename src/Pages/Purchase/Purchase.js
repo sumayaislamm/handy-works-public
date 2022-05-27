@@ -5,7 +5,7 @@ import SinglePurchase from "./SinglePurchase";
 const Purchase = () => {
   const { purchaseId } = useParams();
   const [purchase, setPurchase] = useState({});
-  const [modal, setModal] = useState(null);
+  const [model, setModel] = useState(null);
 
   useEffect(() => {
     const url = `http://localhost:5000/product/${purchaseId}`;
@@ -36,8 +36,8 @@ const Purchase = () => {
         </p>
         <div className="card-actions">
         
-            <label htmlFor="my-modal" onClick={() => setModal(purchase)} className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">open modal</label>
-            {modal && <SinglePurchase modal={modal} setModal={setModal}></SinglePurchase>}
+            <label htmlFor="my-model" onClick={() => setModel(purchase)} className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">Order</label>
+            {model && <SinglePurchase model={model} setModel={setModel}></SinglePurchase>}
         </div>
       </div>
     </div>

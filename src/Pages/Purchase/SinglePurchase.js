@@ -3,16 +3,16 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { toast } from 'react-toastify';
 
-const SinglePurchase = ({ modal, setModal }) => {
-  const {_id, name, price} = modal;
+const SinglePurchase = ({ model, setModel }) => {
+  const {_id, name, price} = model;
   const [user] = useAuthState(auth);
-  const handleModal = event =>{
+  const handleModel = event =>{
     event.preventDefault();
     const name = event.target.name.value;
     console.log(_id, name);
     const model ={
-      modalId: _id,
-      modal:name,
+      modelId: _id,
+      model:name,
       personName: user.displayName,
       person: user.email,
       phone: event.target.phone.value,
@@ -24,7 +24,7 @@ const SinglePurchase = ({ modal, setModal }) => {
       headers:{
         'content-type': 'application/json'
       },
-      body: JSON.stringify(modal)
+      body: JSON.stringify(model)
     })
     .then(res => res.json())
     .then(data =>{
@@ -34,18 +34,18 @@ const SinglePurchase = ({ modal, setModal }) => {
       }else{
         toast.error(`Your Have Previous Order as ${user?.displayName}`)
       }
-      setModal(null);
+      setModel(null);
     })
 
     
   }
   return (
     <div>
-      <input type="checkbox" id="my-modal" className="modal-toggle" />
+      <input type="checkbox" id="my-model" className="modal-toggle" />
       <div className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <label
-            htmlFor="my-modal"
+            htmlFor="my-model"
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕
@@ -53,7 +53,7 @@ const SinglePurchase = ({ modal, setModal }) => {
           <h3 className="font-bold text-lg">NAME: {name}</h3>
           <p className="py-4">price={price}</p>
           <form 
-          onSubmit={handleModal}
+          onSubmit={handleModel}
           className="grid grid-cols-1 gap-3 justify-items-center">
             
             <input

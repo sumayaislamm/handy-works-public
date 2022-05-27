@@ -23,7 +23,7 @@ const Navbar = () =>  {
       <li><Link className="text-l" to="/dashbroad">Dashbroad</Link></li>
       }
       <li><Link className="text-l" to="/portfolio">My Portfolio</Link></li>
-      {/* <li><Link className="text-l" to="/purchase">Purchase</Link></li> */}
+     
       <li>{ user ? <button className="btn btn-outline btn-accent" onClick={logout}>Log Out</button> :
         <Link to="/login" className="btn btn-outline btn-accent">Login</Link>
         }</li>
@@ -65,7 +65,7 @@ const Navbar = () =>  {
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-      <label tabIndex="1" for="dashbroad-sidebar" className="btn btn-ghost lg:hidden">
+      <label tabIndex="1" htmlFor="dashbroad-sidebar" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
