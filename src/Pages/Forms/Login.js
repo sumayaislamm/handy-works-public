@@ -20,7 +20,7 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
-  const [token] = useToken(user || user);
+  const [token] = useToken(user || gUser);
 
   let signInErrorMessage;
 
@@ -29,10 +29,10 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
 
   useEffect( () =>{
-    if (user || gUser) {
+    if (token) {
       navigate(from, { replace: true});
     }
-  },[user, gUser, from, navigate])
+  },[token, from, navigate])
  
   if(loading || gLoading){
     return <Loading></Loading>

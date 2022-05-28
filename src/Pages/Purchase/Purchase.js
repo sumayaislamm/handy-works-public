@@ -12,7 +12,8 @@ const Purchase = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPurchase(data));
-  }, []);
+  }, [purchaseId]);
+  console.log(purchase);
 
   return (
     <div>

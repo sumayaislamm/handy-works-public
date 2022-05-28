@@ -4,7 +4,7 @@ import auth from "../../firebase.init";
 import { toast } from 'react-toastify';
 
 const SinglePurchase = ({ model, setModel }) => {
-  const {_id, name, price} = model;
+  const {_id, name:productname , price, img, minimun, avilable} = model;
   const [user] = useAuthState(auth);
   const handleModel = event =>{
     event.preventDefault();
@@ -12,12 +12,16 @@ const SinglePurchase = ({ model, setModel }) => {
     console.log(_id, name);
     const model ={
       modelId: _id,
-      model:name,
+      model: productname,
+      modelavilable:avilable,
+      modelminimum:minimun,
+      img: img,
       personName: user.displayName,
       person: user.email,
       phone: event.target.phone.value,
       address: event.target.address.value
     }
+    console.log(productname);
 
     fetch('http://localhost:5000/model',{
       method: 'POST',
@@ -50,7 +54,7 @@ const SinglePurchase = ({ model, setModel }) => {
           >
             ✕
           </label>
-          <h3 className="font-bold text-lg">NAME: {name}</h3>
+          <h3 className="font-bold text-lg">NAME: {productname}</h3>
           <p className="py-4">price={price}</p>
           <form 
           onSubmit={handleModel}

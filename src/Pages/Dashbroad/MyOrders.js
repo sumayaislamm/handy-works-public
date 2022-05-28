@@ -10,26 +10,21 @@ const MyOrders = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (user) {
-      const url = `http://localhost:5000/model?person=${user?.email}`;
-      fetch(url, {
+      const url = `http://localhost:5000/model/${user.email}`;
+      fetch(url,  {
         method: 'GET',
         headers:{
           'authorization': `Bearer ${localStorage.getItem('accessToken')}`
         }
       })
-        .then(res => {
-          console.log('res', res);
-          if(res.status === 401 || res.status === 403){
-               navigate('/')
-          }
-         return res.json()
-        })
-        .then(data => {
-          setOrders(data);
+        .then(res =>res.json())
+        .then(data => {setOrders(data);
         });
-    }
-  }, [user, navigate]);
+   
+  }, [user]);
+
+  console.log(orders);
+
 
   return (
     <div>
@@ -42,6 +37,9 @@ const MyOrders = () => {
             <tr>
               <th></th>
               <th>Product Name</th>
+              <th>User Name</th>
+              <th>User Email</th>
+              <th>Phone</th>
               <th>Quantity</th>
               <th>Avilable</th>
               
@@ -49,11 +47,15 @@ const MyOrders = () => {
           </thead>
           <tbody>
             {
-              orders.map((o, index) =><tr>
+              orders?.map((o, index) =><tr
+              key={index}>
                 <th>{index + 1}</th>
-                <th>{o.name}</th>
-                <td>{o.minimun}</td>
-                <td>{o.avilable}</td>
+                <th>{o.model}</th>
+                <th>{o.personName}</th>
+                <td>{o.person}</td>
+                <td>{o.phone}</td>
+                <td>{o.modelminimum}</td>
+                <td>{o.modelavilable}</td>
               </tr>)
             }
             
