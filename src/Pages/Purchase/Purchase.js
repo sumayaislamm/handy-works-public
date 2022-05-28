@@ -8,7 +8,7 @@ const Purchase = () => {
   const [model, setModel] = useState(null);
 
   useEffect(() => {
-    const url = `http://localhost:5000/product/${purchaseId}`;
+    const url = `https://safe-anchorage-57552.herokuapp.com/product/${purchaseId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPurchase(data));

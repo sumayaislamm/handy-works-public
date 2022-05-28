@@ -7,7 +7,7 @@ const useToken = user =>{
     const currentUser = {email: email};
     
     if(email){
-      const url = `http://localhost:5000/user/${email}`
+      const url = `https://safe-anchorage-57552.herokuapp.com/user/${email}`
       console.log(email);
       fetch(url,{
          method: 'PUT',

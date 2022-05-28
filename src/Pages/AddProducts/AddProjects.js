@@ -16,7 +16,7 @@ const AddProducts = () => {
       userDescription: data.description,
       rating: data.rating,
     };
-    fetch("http://localhost:5000/review", {
+    fetch("https://safe-anchorage-57552.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json"

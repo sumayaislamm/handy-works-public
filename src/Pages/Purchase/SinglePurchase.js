@@ -23,7 +23,7 @@ const SinglePurchase = ({ model, setModel }) => {
     }
     console.log(productname);
 
-    fetch('http://localhost:5000/model',{
+    fetch('https://safe-anchorage-57552.herokuapp.com/model',{
       method: 'POST',
       headers:{
         'content-type': 'application/json'

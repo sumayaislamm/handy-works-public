@@ -10,7 +10,7 @@ const MyOrders = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-      const url = `http://localhost:5000/model/${user.email}`;
+      const url = `https://safe-anchorage-57552.herokuapp.com/model/${user.email}`;
       fetch(url,  {
         method: 'GET',
         headers:{
@@ -40,7 +40,7 @@ const MyOrders = () => {
               <th>User Name</th>
               <th>User Email</th>
               <th>Phone</th>
-              <th>Quantity</th>
+              <th>Address</th>
               <th>Avilable</th>
               
             </tr>
@@ -54,7 +54,7 @@ const MyOrders = () => {
                 <th>{o.personName}</th>
                 <td>{o.person}</td>
                 <td>{o.phone}</td>
-                <td>{o.modelminimum}</td>
+                <td>{o.address}</td>
                 <td>{o.modelavilable}</td>
               </tr>)
             }
