@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
@@ -24,13 +24,17 @@ const Register = () => {
 
   const [token] = useToken(user || gUser);
   
+   
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   useEffect( () =>{
     if (token) {
-      navigate('/');
+      navigate(from, { replace: true});
     }
-  },[token]) 
+  },[token, from, navigate])
 
-  const navigate = useNavigate();
 
 
   let signInErrorMessage;
