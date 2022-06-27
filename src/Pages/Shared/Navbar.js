@@ -6,7 +6,7 @@ import auth from "../../firebase.init";
 import logo from '../../Images/logo-removebg-preview.png';
 const Navbar = () =>  {
 
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const logout = () => {
     signOut(auth);
@@ -58,12 +58,12 @@ const Navbar = () =>  {
           
         </div>
         <img className=" ml-5 w-30 h-20" src={logo} alt="" />
-        <Link to="/" className="btn btn-ghost normal-case mx-6 text-neutral  text-4xl"> Handiworks</Link>
+        <Link to="/" className="btn btn-ghost normal-case mx-6  text-4xl"> Handiworks</Link>
       </div>
-      <div className="navbar-center hidden mx-8 lg:flex">
+      <div className="navbar-end hidden mx-8 lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end lg:hidden">
       <label tabIndex="1" htmlFor="dashbroad-sidebar" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -32,11 +32,12 @@ const SinglePurchase = ({ model, setModel }) => {
     })
     .then(res => res.json())
     .then(data =>{
-      console.log(data);
+     
       if(data.success){
-        toast(`Your Order Confirm as ${user?.displayName}`)
-      }else{
         toast.error(`Your Have Previous Order as ${user?.displayName}`)
+      }
+      else{
+        toast(`Your Order Confirm as ${user?.displayName}`)
       }
       setModel(null);
     })
@@ -97,3 +98,5 @@ const SinglePurchase = ({ model, setModel }) => {
 };
 
 export default SinglePurchase;
+
+
