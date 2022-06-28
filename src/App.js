@@ -14,12 +14,13 @@ import Purchase from "./Pages/Purchase/Purchase";
 import AddProducts from "./Pages/AddProducts/AddProjects";
 import MyPortfolio from "./Pages/Blog/MyPortfolio";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashbroad from "./Pages/Dashbroad/Dashbroad";
 import MyOrders from "./Pages/Dashbroad/MyOrders";
 import MyReview from "./Pages/Dashbroad/MyReview";
 import MyProfile from "./Pages/Dashbroad/MyProfile";
+import AllUsers from "./Pages/Dashbroad/AllUsers";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
              <Route index element={<MyOrders></MyOrders>}></Route>
              <Route path="review" element={<MyReview></MyReview>}></Route>
              <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+             <Route path="users" element={<AllUsers></AllUsers>}></Route>
            </Route>
 
          <Route path="/purchase/:purchaseId" element={<RequireAuth>
