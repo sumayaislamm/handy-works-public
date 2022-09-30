@@ -19,7 +19,9 @@ const useCountdown = (targetDate) => {
 };
 
 const getReturnValues = (countDown) => {
+
   // calculate time left
+  
   const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -47,25 +49,25 @@ const Countdown = ({ targetDate }) => {
   } else {
     return (
       <div className="text-center my-20">
-        <h1 className="text-center   my-20 text-5xl font-bold">Wait For Our <span className="text-cyan-500">New Features</span></h1>
+        <h1 className="text-center   my-20 text-3xl">Wait For Our <span className="text-green-600">New Features</span></h1>
         <div className="divider"></div>
-        <div className="grid lg:grid-flow-col gap-5 text-center bg-gradient-to-r from-cyan-500 to-blue-500 p-12 rounded justify-center  auto-cols-max">
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-            <span className="countdown font-mono text-5xl">
+        <div className="grid lg:grid-flow-col gap-5 text-center  p-12 rounded justify-center  auto-cols-max">
+          <div className="flex flex-col p-2 bg-gradient-to-r from-green-200 to-green-100 rounded-box text-black">
+            <span className="countdown  font-mono text-5xl">
             Days: {days}
             </span>
           </div>
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+          <div className="flex flex-col p-2 bg-gradient-to-r from-green-200 to-green-100 rounded-box text-black">
             <span className="countdown font-mono text-5xl">
             Hours: {hours}
             </span>
           </div>
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+          <div className="flex flex-col p-2 bg-gradient-to-r from-green-200 to-green-100 rounded-box text-black">
             <span className="countdown font-mono text-5xl">
              Min: {minutes}
             </span>
           </div>
-          <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+          <div className="flex flex-col p-2 bg-gradient-to-r from-green-200 to-green-100 rounded-box text-black">
             <span className="countdown font-mono text-5xl">
             Sec: {seconds} 
             </span>

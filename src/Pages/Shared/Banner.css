@@ -1,9 +1,42 @@
 .bannerImg{
-  background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://i.ibb.co/Gkrc4DH/wood.jpg);
+  background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://i.ibb.co/HD4d4gx/pexels-lilacdragonfly-907905.jpg);
   background-position: center;
   background-size: cover;
   height: 700px;
 
+}
+.bannerImg02{
+  background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://i.ibb.co/qmgYgmt/pexels-pixabay-461982.jpg
+
+  );
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+
+}
+.bannerImg03{
+  background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://i.ibb.co/RQTFBmr/pexels-peter-fazekas-1137332.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+
+}
+.bannerImg04{
+  background-image: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://i.ibb.co/Gx9g4tY/pexels-jonathan-petersson-540925.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+
+}
+
+.seeherebtn{
+  height: 30px;
+  width: 100px;
+  font-size: 15px;
+  padding-top: 4px;
+  padding-left: 4px;
+  margin-left: 300px;
+  margin-top: 30px;
 }
 
 

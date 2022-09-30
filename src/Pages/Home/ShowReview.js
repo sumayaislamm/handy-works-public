@@ -1,21 +1,19 @@
-import React from 'react';
+import React from "react";
 
-const ShowReview = ({review}) => {
-  const {name, description} = review;
+const ShowReview = ({ review }) => {
+  const { name, description, img } = review;
   return (
     <div>
       <div class="card w-96 bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="card-title">Reviews</h2>
-          <p>Name:{review.name}</p>
-          <p>{review.description}</p>
+          <div class="avatar justify-center">
+            <div class="w-36 mask mask-squircle">
+              <img alt="Product Pic" src={img}/>
+            </div>
+          </div>
+          <p className="bg-green-600">Name:{name}</p>
+          <p>{description}</p>
         </div>
-        {/* <figure>
-          <img
-            src="https://i.ibb.co/4KWpzQy/images-441x470-removebg-preview-1.png"
-            alt="review"
-          />
-        </figure> */}
       </div>
     </div>
   );

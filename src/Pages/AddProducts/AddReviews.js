@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 
 const AddProducts = () => {
@@ -12,18 +12,16 @@ const AddProducts = () => {
     console.log(data);
 
     const userReview = {
-      userReview: user.displayName,
-      userDescription: data.description,
-      rating: data.rating,
+      userReview: user.name
     };
-    fetch("https://safe-anchorage-57552.herokuapp.com/review", {
+    fetch("http://localhost:5000/review", {
       method: "POST",
       headers: {
-        "content-type": "application/json"
-        // authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
 
-      body: JSON.stringify(userReview)
+      body: JSON.stringify(userReview) })
         .then((res) => res.json())
         .then((inserted) => {
           if (inserted.insertedId) {
@@ -33,36 +31,33 @@ const AddProducts = () => {
           } else {
             toast.error("Failed add to the data");
           }
-        }),
-    });
+        });
   
   };
   return (
     <div>
-      <h1 className=" text-center mt-16 text-5xl font-bold">
-        Add a <span className="text-cyan-500"> review </span> here!!
+      <ToastContainer></ToastContainer>
+      <h1 className=" text-center mt-16 text-3xl font-bold">
+        Add a <span className="text-green-600"> review </span> here!!
       </h1>
       <div className="flex justify-center items-center my-16">
         <form className="text-xl" onSubmit={handleSubmit(onSubmit)}>
-          <div className="grid grid-rows-3 gap-10 w-40">
+          <div className="grid grid-rows-3 gap-4 ">
             <input
-              className="p-3 border border-indigo-600"
-              disabled
-              value={user?.displayName || ""}
-              {...register("name")}
+              className="p-5 border border-green-600"
               placeholder="Name"
-              {...register("name", { required: true, maxLength: 20 })}
+              {...register("name")}
             />
 
             <textarea
              
-              className=" p-3 border border-indigo-600"
+              className=" p-5 border border-green-600"
               placeholder="Description"
               {...register("description")}
             />
 
             <input
-              className="p-3 border border-indigo-600"
+              className="p-5 border border-green-600"
               placeholder="Price"
               type="number"
               {...register("price")}
@@ -70,7 +65,7 @@ const AddProducts = () => {
 
           </div>
           <input
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 btn text-neutral mt-5 text-center justify-center flex"
+            className="bg-gradient-to-r from-green-900 to-green-100 btn text-black mt-5 text-center justify-center flex"
             type="submit"
             value="Add Review"
           />

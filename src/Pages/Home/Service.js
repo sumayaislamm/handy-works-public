@@ -3,12 +3,11 @@ import React from "react";
 const Service = ({service}) => {
  
   return (
-    <div className="card lg:w-96 w-30 m-11 bg-base-100 shadow-xl">
-      <figure className="px-10 pt-10">
+    <div className="card lg:w-72 w-30  bg-green-100 shadow-xl">
+      <figure className="px-20 pt-20">
         <img
           src={service.img}
           alt="Services"
-          className="rounded-xl"
         />
       </figure>
       <div className="card-body items-center text-center">

@@ -36,7 +36,7 @@ const MyOrders = () => {
 
   return (
     <div>
-      <h1 className="text-cyan-500 text-center  my-5 text-3xl font-bold">
+      <h1 className="text-green-600 text-center  my-5 text-3xl font-bold">
         Orders{orders.length}
       </h1>
       <div className="overflow-x-auto">

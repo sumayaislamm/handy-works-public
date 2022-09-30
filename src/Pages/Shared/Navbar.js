@@ -3,7 +3,6 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
-import logo from '../../Images/logo-removebg-preview.png';
 const Navbar = () =>  {
 
   const [user] = useAuthState(auth);
@@ -15,21 +14,21 @@ const Navbar = () =>  {
 
   const menuItems = (
     <>
-     <li><Link  className="text-l" to="/">Home</Link ></li>
-      <li><Link className="text-l" to="/blog">Blog</Link></li>
-      <li><Link className="text-l" to="/addproducts">Add Reviews</Link></li>
+     <li><Link  className="font-bold text-black" to="/">Home</Link ></li>
+      <li><Link className="font-bold text-black" to="/blog">Blog</Link></li>
+      <li><Link className="font-bold text-black" to="/addproducts">Add Reviews</Link></li>
       { user &&
-      <li><Link className="text-l" to="/dashbroad">Dashbroad</Link></li>
+      <li><Link className="font-bold text-black" to="/dashbroad">Dashbroad</Link></li>
       }
-      <li><Link className="text-l" to="/portfolio">My Portfolio</Link></li>
+      <li><Link className="font-bold text-black" to="/portfolio">My Portfolio</Link></li>
      
-      <li>{ user ? <button className="btn btn-outline btn-accent" onClick={logout}>Log Out</button> :
-        <Link to="/login" className="btn btn-outline btn-accent">Login</Link>
+      <li>{ user ? <button className="font-bold text-black" onClick={logout}>Log Out</button> :
+        <Link to="/login" className="font-bold text-black">Login</Link>
         }</li>
     </>
   );
   return (
-    <div className="navbar  bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="navbar bg-gradient-to-r from-green-900 to-green-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -50,15 +49,15 @@ const Navbar = () =>  {
           </label>
           <ul
             tabIndex="0"
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-100%"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 w-100%"
           >
             {menuItems}
            
           </ul>
           
         </div>
-        <img className=" ml-5 w-30 h-20" src={logo} alt="" />
-        <Link to="/" className="btn btn-ghost normal-case mx-6  text-4xl"> Handiworks</Link>
+        <img className=" ml-5 w-30 h-20" src="https://i.ibb.co/JpxVz8F/rubber-plant.png" alt="" />
+        <Link to="/" className=" normal-case mx-6 text-white font-bold text-xl">Workers.happy</Link>
       </div>
       <div className="navbar-end hidden mx-8 lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>

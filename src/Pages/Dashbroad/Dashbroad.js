@@ -12,7 +12,7 @@ const Dashbroad = () => {
       <div className="drawer drawer-mobile">
         <input id="dashbroad-sidebar" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
-        <h1 className="text-cyan-500 text-center  mt-20 text-5xl font-bold">
+        <h1 className="text-green-600 text-center  mt-20 text-5xl font-bold">
         Dashbroad
       </h1>
          <Outlet></Outlet>
@@ -31,11 +31,11 @@ const Dashbroad = () => {
             <li>
               <Link to="/dashbroad/profile">My Profile</Link>
             </li>
-            {/* { admin &&  */}
+            { admin && 
             <li>
               <Link to="/dashbroad/users">All Users</Link>
             </li>
-          {/* } */}
+          } 
           </ul>
         </div>
       </div>
