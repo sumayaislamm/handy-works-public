@@ -20,7 +20,7 @@ const Navbar = () =>  {
       { user &&
       <li><Link className="font-bold text-black" to="/dashbroad">Dashbroad</Link></li>
       }
-      <li><Link className="font-bold text-black" to="/portfolio">My Portfolio</Link></li>
+      <li><Link className="font-bold text-black" to="/portfolio">Developer</Link></li>
      
       <li>{ user ? <button className="font-bold text-black" onClick={logout}>Log Out</button> :
         <Link to="/login" className="font-bold text-black">Login</Link>

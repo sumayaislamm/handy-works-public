@@ -8,7 +8,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect( ()=>{
-    fetch('https://safe-anchorage-57552.herokuapp.com/product')
+    fetch('https://safe-anchorage-57552.herokuapp.com/products')
     .then(res => res.json())
     .then(data => setProducts(data));
   }, []);
@@ -22,7 +22,7 @@ const Products = () => {
       <div className=' grid grid-cols-1 lg:grid-cols-4 gap-4 p-12'>
    
    {
-     products.map(product => <Product
+     products.slice(0,4).map(product => <Product
      key={product._id}
      product={product}
      ></Product>)

@@ -5,6 +5,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import useToken from "../../hooks/useToken";
+import './Login.css';
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -49,8 +50,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex lg:h-screen justify-center items-center">
-      <div className="card lg:w-96 bg-base-100 shadow-xl">
+    <div className="flex lg:h-screen bckimg justify-center items-center">
+      <div className="card lg:w-96 bg-green-100 shadow-xl">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -102,15 +103,15 @@ const Login = () => {
             </label>
             </div>
              {signInErrorMessage}
-            <input className="btn w-full max-w-xs btn-outline text-center justify-center btn-accent" type="submit" value="Login" />
+            <input className="btn w-full max-w-xs btn-outline text-center justify-center bg-green-900 text-white" type="submit" value="Login" />
           </form>
           <small><p className="my-5">New to Handy Works? 
-            <Link to="/register" className="text-blue-500"> CREATE NEW ACCOUNT!
+            <Link to="/register" className="text-green-500"> CREATE NEW ACCOUNT!
           </Link></p></small>
           <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
-            className="btn btn-accent btn-outline"
+            className="btn bg-green-900 text-white btn-outline"
           >
             Continue With Google
           </button>

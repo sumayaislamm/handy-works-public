@@ -5,6 +5,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import useToken from '../../hooks/useToken';
+import './Login.css';
 
 const Register = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -54,8 +55,8 @@ const Register = () => {
     console.log('update done');
   };
   return (
-    <div className="flex lg:h-screen justify-center items-center">
-    <div className="card lg:w-96 bg-base-100 shadow-xl">
+    <div className="flex bckimg lg:h-screen justify-center items-center">
+    <div className="card lg:w-96 bg-green-100 shadow-xl">
       <div className="card-body">
         <h2 className="text-center text-2xl font-bold">Register</h2>
         <form onSubmit={handleSubmit(onSubmit)}> 
@@ -138,15 +139,15 @@ const Register = () => {
           </label>
           </div>
            {signInErrorMessage}
-          <input className="btn w-full max-w-xs btn-outline text-center justify-center btn-accent" type="submit" value="Register" />
+          <input className="btn w-full max-w-xs btn-outline text-center justify-center bg-green-900 text-white" type="submit" value="Register" />
         </form>
         <small><p className="my-5">Already Have an account? 
-          <Link to="/login" className="text-blue-500"> LOG-IN HERE!
+          <Link to="/login" className="text-green-500"> LOG-IN HERE!
         </Link></p></small>
         <div className="divider">OR</div>
         <button
           onClick={() => signInWithGoogle()}
-          className="btn btn-accent btn-outline"
+          className="btn bg-green-900 text-white btn-outline"
         >
           Continue With Google
         </button>

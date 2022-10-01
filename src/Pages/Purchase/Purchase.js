@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import SinglePurchase from "./SinglePurchase";
 
 const Purchase = () => {
@@ -17,30 +17,34 @@ const Purchase = () => {
 
   return (
     <div>
-      <div className="card justify-center items-center p-5 lg:card-side bg-base-100 shadow-xl">
-      <div className="card bg-base-100 shadow-xl">
+      <div className="card justify-center items-center grid grid-cols-2 gap-10 p-5 lg:card-side bg-base-100 shadow-xl">
+      <div className=" bg-green-100 shadow-xl">
       <figure className="px-10 pt-10">
         <img src={purchase.img} alt="Shoes" className="rounded-xl w-3/12" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title text-xl lg-text-3xl text-cyan-500  text-center">
+        <h2 className="card-title text-xl lg-text-3xl text-green-500  text-center">
           {purchase.name}
         </h2>
-        <p className="text-sm lg:text-xl text-cyan-500">
+        <p className="text-sm lg:text-xl text-green-500">
           Price:{purchase.price}
         </p>
-        <p className="text-sm lg:text-xl text-cyan-500">
+        <p className="text-sm lg:text-xl text-green-500">
           Stock:{purchase.avilable}
         </p>
-        <p className="text-sm lg:text-xl text-cyan-500">
+        <p className="text-sm lg:text-xl text-green-500">
           Minimum Order:{purchase.minimun}
         </p>
-        <div className="card-actions">
+        <div>
         
-            <label htmlFor="my-model" onClick={() => setModel(purchase)} className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 ">Order</label>
+            <label htmlFor="my-model" onClick={() => setModel(purchase)} className="btn bg-green-900">Order</label>
             {model && <SinglePurchase model={model} setModel={setModel}></SinglePurchase>}
         </div>
       </div>
+    </div>
+    <div className="card bg-green-100 p-10 shadow-xl">
+      <h1>{purchase.description}</h1>
+      <Link to="/addproducts" className="btn mx-20 my-32 bg-green-900 ">Give Review</Link>
     </div>
     </div>
     </div>

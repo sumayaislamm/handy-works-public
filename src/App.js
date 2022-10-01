@@ -1,7 +1,6 @@
 
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Appoimtment from "./Pages/Appointment/Appoimtment";
 import Blog from "./Pages/Blog/Blog";
 import Login from "./Pages/Forms/Login";
 import Footer from "./Pages/Home/Footer";
@@ -21,6 +20,7 @@ import MyReview from "./Pages/Dashbroad/MyReview";
 import MyProfile from "./Pages/Dashbroad/MyProfile";
 import AllUsers from "./Pages/Dashbroad/AllUsers";
 import AddProducts from "./Pages/AddProducts/AddReviews";
+import AllProducts from "./Pages/Products/AllProducts";
 
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/allproducts" element={<AllProducts></AllProducts>}></Route>
 
          <Route path="/dashbroad" element={<RequireAuth>
            <Dashbroad></Dashbroad>
@@ -53,7 +54,6 @@ function App() {
            </RequireAuth>}></Route>
          <Route path="/blog" element={<Blog></Blog>}></Route>
          <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
-         <Route path="/appointment" element={<Appoimtment></Appoimtment>}></Route>
          <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
