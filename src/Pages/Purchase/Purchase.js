@@ -20,7 +20,7 @@ const Purchase = () => {
       <div className="card justify-center items-center grid grid-cols-2 gap-10 p-5 lg:card-side bg-base-100 shadow-xl">
       <div className=" bg-green-100 shadow-xl">
       <figure className="px-10 pt-10">
-        <img src={purchase.img} alt="Shoes" className="rounded-xl w-3/12" />
+        <img src={purchase.img} alt="Products pic" className="rounded-xl w-3/12" />
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title text-xl lg-text-3xl text-green-500  text-center">
