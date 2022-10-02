@@ -34,7 +34,7 @@ const Services = () => {
     },
   ]
   return (
-    <div>
+    <div id='service'>
     <div>
       <h1 className='text-4xl lg:text-3xl text-center p-2 lg:p-8  ' >Here Our <span className='text-green-600'>Services</span></h1>
     </div>

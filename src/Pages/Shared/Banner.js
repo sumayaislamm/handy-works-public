@@ -70,7 +70,7 @@ const Banner = () => {
                     impossible. <br /> _ Anton Chekhov
                   </p>
                   <a
-                    href="#product"
+                    href="#review"
                     className="seeherebtn  text-white bg-green-900 flex "
                   >
                     See Here <span className="m-1"> <BsFillArrowDownCircleFill/></span>
@@ -108,7 +108,7 @@ const Banner = () => {
                    Good in keeping up with customer trends, new technologies, and best practices.
                   </p>
                   <a
-                    href="#product"
+                    href="#service"
                     className="seeherebtn  text-white bg-green-900 flex "
                   >
                     See Here <span className="m-1"> <BsFillArrowDownCircleFill/></span>
@@ -146,7 +146,7 @@ const Banner = () => {
                     We’re well-disciplined in conducting researches about the value of a business.
                   </p>
                   <a
-                    href="#product"
+                    href="#contact"
                     className="seeherebtn  text-white bg-green-900 flex "
                   >
                     See Here <span className="m-1"> <BsFillArrowDownCircleFill/></span>

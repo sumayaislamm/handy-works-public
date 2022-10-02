@@ -1,27 +1,22 @@
 import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
-import auth from "../../firebase.init";
 
 const AddProducts = () => {
   const { register, handleSubmit, reset } = useForm();
-  const [user] = useAuthState(auth);
   
   const onSubmit = (data) => {
     console.log(data);
 
-    const userReview = {
-      userReview: user.name
-    };
-    fetch("http://localhost:5000/review", {
+   
+    fetch("https://safe-anchorage-57552.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
 
-      body: JSON.stringify(userReview) })
+      body: JSON.stringify(data) })
         .then((res) => res.json())
         .then((inserted) => {
           if (inserted.insertedId) {
@@ -44,23 +39,34 @@ const AddProducts = () => {
         <form className="text-xl" onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-rows-3 gap-4 ">
             <input
-              className="p-5 border border-green-600"
+              className="p-2 border border-green-600"
+              placeholder="Drop Your Pic"
+              type="picture"
+              {...register("img")}
+            />
+            <input
+              className="p-2 border border-green-600"
               placeholder="Name"
               {...register("name")}
+            />
+            <input
+              className="p-2 border border-green-600"
+              placeholder="Enter Your Email"
+              {...register("email")}
             />
 
             <textarea
              
-              className=" p-5 border border-green-600"
+              className=" p-3 border border-green-600"
               placeholder="Description"
               {...register("description")}
             />
 
             <input
-              className="p-5 border border-green-600"
-              placeholder="Price"
+              className="p-2 border border-green-600"
+              placeholder="0-5 rate"
               type="number"
-              {...register("price")}
+              {...register("ratting", { min: 0, max: 5 } )}
             />
 
           </div>

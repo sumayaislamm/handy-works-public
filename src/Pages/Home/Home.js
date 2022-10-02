@@ -7,6 +7,8 @@ import Services from './Services';
 import Reviews from './Reviews';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Demo from './Demo';
+import ContactUs from './ContactUs';
 
 
 const Home = () => {
@@ -22,7 +24,9 @@ const Home = () => {
       <Products></Products>
       <Services></Services>
       <Info ></Info>
+      <Demo></Demo>
       <Reviews></Reviews>
+      <ContactUs></ContactUs>
     <CountDown targetDate={dateTimeAfterTwentyDays}></CountDown>
     </div>
 

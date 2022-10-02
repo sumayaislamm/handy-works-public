@@ -21,6 +21,7 @@ import MyProfile from "./Pages/Dashbroad/MyProfile";
 import AllUsers from "./Pages/Dashbroad/AllUsers";
 import AddProducts from "./Pages/AddProducts/AddReviews";
 import AllProducts from "./Pages/Products/AllProducts";
+import AllReviews from "./Pages/Products/AllReviews";
 
 
 function App() {
@@ -35,7 +36,10 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/allproducts" element={<AllProducts></AllProducts>}></Route>
+
+
+        <Route path="/allproducts" element={<RequireAuth><AllProducts></AllProducts></RequireAuth>}></Route>
+        <Route path="/allreviews" element={<RequireAuth><AllReviews></AllReviews></RequireAuth>}></Route>
 
          <Route path="/dashbroad" element={<RequireAuth>
            <Dashbroad></Dashbroad>
@@ -53,7 +57,7 @@ function App() {
            <AddProducts></AddProducts>
            </RequireAuth>}></Route>
          <Route path="/blog" element={<Blog></Blog>}></Route>
-         <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
+         <Route path="/portfolio" element={<RequireAuth><MyPortfolio></MyPortfolio></RequireAuth>}></Route>
          <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
