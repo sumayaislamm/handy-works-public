@@ -7,7 +7,7 @@ const useToken = user =>{
     const currentUser = {email: email};
     
     if(email){
-      const url = `https://safe-anchorage-57552.herokuapp.com/user/${email}`
+      const url = `https://assingment-12-server-production.up.railway.app/user/${email}`
       console.log(email);
       fetch(url,{
          method: 'PUT',

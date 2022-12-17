@@ -11,7 +11,7 @@ const MyOrders = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-      const url = `https://safe-anchorage-57552.herokuapp.com/model/${user.email}`;
+      const url = `https://assingment-12-server-production.up.railway.app/model/${user.email}`;
       fetch(url,  {
         method: 'GET',
         headers:{

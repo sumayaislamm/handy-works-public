@@ -7,7 +7,7 @@ const MyReview = () => {
   const [review, setReview] = useState([]);
 
   useEffect(() => {
-    const url = `https://safe-anchorage-57552.herokuapp.com/review`;
+    const url = `https://assingment-12-server-production.up.railway.app/review`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setReview(data));

@@ -9,7 +9,7 @@ const AddProducts = () => {
     console.log(data);
 
    
-    fetch("https://safe-anchorage-57552.herokuapp.com/review", {
+    fetch("https://assingment-12-server-production.up.railway.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

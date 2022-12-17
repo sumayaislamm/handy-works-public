@@ -23,7 +23,7 @@ const SinglePurchase = ({ model, setModel }) => {
     }
     console.log(productname);
 
-    fetch('https://safe-anchorage-57552.herokuapp.com/model',{
+    fetch('https://assingment-12-server-production.up.railway.app/model',{
       method: 'POST',
       headers:{
         'content-type': 'application/json'
